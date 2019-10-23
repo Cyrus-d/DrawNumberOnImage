@@ -89,7 +89,7 @@ namespace DrawNumberOnImage
                 using (var bmp = new Bitmap(lblImagePath.Text))
                 {
 
-                    RectangleF rectf = new RectangleF(620, -300, bmp.Width, bmp.Height);
+                    var rectf = new RectangleF(620, -300, bmp.Width, bmp.Height);
 
                     Graphics g = Graphics.FromImage(bmp);
 
