@@ -109,11 +109,11 @@ namespace DrawNumberOnImage
                         LineAlignment = StringAlignment.Center
                     };
 
-                    g.DrawString((i+1).ToString(), new Font("Arial", 200), Brushes.Black, rectf, format);
+                    g.DrawString((i + 1).ToString(), new Font("Arial", 200), Brushes.Black, rectf, format);
 
                     using (MemoryStream memory = new MemoryStream())
                     {
-                        using (FileStream fs = new FileStream(lblOutPath.Text + "\\"+i+"-"+Path.GetFileName(lblImagePath.Text), FileMode.Create, FileAccess.ReadWrite))
+                        using (FileStream fs = new FileStream(lblOutPath.Text + "\\" + (i + 1) + Path.GetExtension(lblImagePath.Text), FileMode.Create, FileAccess.ReadWrite))
                         {
                             bmp.Save(memory, ImageFormat.Jpeg);
                             byte[] bytes = memory.ToArray();
